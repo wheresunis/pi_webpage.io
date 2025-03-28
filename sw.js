@@ -4,24 +4,24 @@ const CACHE_NAME = "pwa-cache-v1";
 // Масив ресурсів, які будуть кешовані при встановленні Service Worker 
 // ви кешуєте всі свої файли
 const ASSETS = [
-  "./",                     // Головна сторінка
-  "./students.html",
-  "./dashboard.html",
-  "./tasks.html",
-  "./messages.html",
-  "./styles.css",
-  "./script.js",
-  "./icons/avatar.png",
-  "./icons/bell.png",
-  "./icons/delete.png",
-  "./icons/deleteWhite.png",
-  "./icons/email.png",
-  "./icons/menu.png",
-  "./icons/pen.png",
-  "./icons/penWhite.png",
-  "./icons/personAvatar.png",
-  "./icons/plus.png",
-  "./icons/profile.png"
+  "/",
+  "/students.html",
+  "/dashboard.html",
+  "/tasks.html",
+  "/messages.html",
+  "/styles.css",
+  "/script.js",
+  "/icons/avatar.png",
+  "/icons/bell.png",
+  "/icons/delete.png",
+  "/icons/deleteWhite.png",
+  "/icons/email.png",
+  "/icons/menu.png",
+  "/icons/pen.png",
+  "/icons/penWhite.png",
+  "/icons/personAvatar.png",
+  "/icons/plus.png",
+  "/icons/profile.png"
 ];
 
 // Подія встановлення Service Worker
