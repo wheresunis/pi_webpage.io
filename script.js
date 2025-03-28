@@ -357,7 +357,7 @@ function hideSidebarMenu()
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')  // Зауваж, що шлях починається з "/"
+    navigator.serviceWorker.register('./sw.js')  // Зауваж, що шлях починається з "/"
       .then((registration) => {
         console.log('Service Worker зареєстровано:', registration);
       })
