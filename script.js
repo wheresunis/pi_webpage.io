@@ -355,10 +355,16 @@ function hideSidebarMenu()
     hiddenMenu.style.display = 'none';
 }
 
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("/sw.js")
-      .then(() => console.log("Service Worker registered"))
-      .catch((err) => console.error("Service Worker registration failed", err));
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')  // Зауваж, що шлях починається з "/"
+      .then((registration) => {
+        console.log('Service Worker зареєстровано:', registration);
+      })
+      .catch((error) => {
+        console.log('Помилка при реєстрації Service Worker:', error);
+      });
+  });
 }
+
     
