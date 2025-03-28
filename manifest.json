@@ -10,7 +10,7 @@
   
     "icons": [
       {
-        "src": "/icons/avatar.png",
+        "src": "icons/avatar.png",
         "sizes": "1630x1632",
         "type": "image/png"
       },
