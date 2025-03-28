@@ -15,52 +15,52 @@
         "type": "image/png"
       },
       {
-        "src": "/icons/bell.png",
+        "src": "icons/bell.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/delete.png",
+        "src": "icons/delete.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/deleteWhite.png",
+        "src": "icons/deleteWhite.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/email.png",
+        "src": "icons/email.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/menu.png",
+        "src": "icons/menu.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/pen.png",
+        "src": "icons/pen.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/penWhite.png",
+        "src": "icons/penWhite.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/personAvatar.png",
+        "src": "icons/personAvatar.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/plus.png",
+        "src": "icons/plus.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "/icons/profile.png",
+        "src": "icons/profile.png",
         "sizes": "512x512",
         "type": "image/png"
       }
@@ -68,12 +68,12 @@
   
     "screenshots": [
       {
-        "src": "/screenshots/screenshot1.png",
+        "src": "screenshots/screenshot1.png",
         "sizes": "635x1275",
         "type": "image/png"
       },
       {
-        "src": "/screenshots/screenshot2.png",
+        "src": "screenshots/screenshot2.png",
         "sizes": "2847x1482",
         "type": "image/png",
         "form_factor": "wide"
