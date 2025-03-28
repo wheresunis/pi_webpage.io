@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
+    <link rel="manifest" href="./manifest.json"/>
+</head>
+<body>
+    <header>
+        <a class="logo" href="students.html">CMS</a>
+        <div class="header-icons">
+            <span class="bell-icon" id="notificationBtn"><img src="icons/bell.png" alt="bell icon"></span>
+            <ul class="dropdownRecentMessages" id="notificationDropdown">
+                <li>
+                    <a class="dropdownMessage" href="#">
+                        <div class="user-profile">
+                            <span class="avatar"><img src="icons/personAvatar.png" alt="Avatar1"></span>
+                            <span class="name">John Doe</span>
+                        </div>
+                        <span class="message">Message1</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdownMessage" href="#">
+                        <div class="user-profile">
+                            <span class="avatar"><img src="icons/personAvatar.png" alt="Avatar2"></span>
+                            <span class="name">Jane Smith</span>
+                        </div>
+                        <span class="message">Message2</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdownMessage" href="#">
+                        <div class="user-profile">
+                            <span class="avatar"><img src="icons/personAvatar.png" alt="Avatar3"></span>
+                            <span class="name">Alex Johnson</span>
+                        </div>
+                        <span class="message">Message3</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="dropdownUserProfile" id="dropdownUserProfile">
+                <li>
+                    <a href="#">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Log out
+                    </a>
+                </li>
+            </ul>
+
+            <div class="user-profile" id="user-profile">
+                <span class="avatar"><img src="icons/avatar.png" alt="avatar icon"></span>
+                <span class="user-name">Maria Sokolovska</span>
+            </div>
+            <span class="hidden-menu-button"><img src="icons/menu.png" alt="menu icon"></span>
+        </div>
+    </header>
+    <div class="main">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#"><b>Students</b></a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+            </ul>
+        </nav>
+
+        <section class="wrapper">
+            <h2>Students</h2>
+            <button id="addStudentBtn" class="add-button">
+                <span class="button-text">Add student</span>
+                <span class="button-icon">
+                    <img src="icons/plus.png" alt="plus icon">
+                </span>
+            </button>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <td><input type="checkbox" aria-label="select all" name="checkbox"></td>
+                        <th>Group</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Birthday</th>
+                        <th>Status</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTableBody">
+                    <!-- студенти -->
+                </tbody>
+            </table>
+
+            <div class="center">
+                <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">...</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+                </div>
+              </div>
+        </section>
+
+
+        <nav class="sidebarForPhones">
+            <span class="closeSidebarBtn"><img src="icons/deleteWhite.png" alt="close icon"></span>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#"><b>Students</b></a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li>
+                    <a href="messages.html">Messages</a>
+                    <img src="icons/email.png" alt="inbox icon">
+                </li>
+                <li>
+                    <a href="#">Profile</a>
+                    <img src="icons/profile.png" alt="profile icon">
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="icons/delete.png" alt="Close"></span>
+            <h1 id="modalTitle">Add Student</h1>
+            <form id="student-form">
+                <label for="studentGroup">Group:</label>
+                <select id="studentGroup" required>
+                    <option value="" disabled selected>Choose group</option>
+                    <option>PZ-21</option>
+                    <option>PZ-22</option>
+                    <option>PZ-23</option>
+                    <option>PZ-24</option>
+                    <option>PZ-25</option>
+                    <option>PZ-26</option>
+                </select>
+                <br>
+                <label for="studentName">Name:</label>
+                <input type="text" id="studentName" class="studentName">
+                <span class="error-message"></span>
+                <br>
+                <label for="studentGender">Gender:</label>
+                <select id="studentGender" required>
+                    <option value="" disabled selected>Choose gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <br>
+                <label for="studentBirthday">Date of birth:</label>
+                <input type="date" id="studentBirthday" required>
+                <br>
+                <div class="modal-buttons">
+                    <button id="saveStudent">Add</button>
+                    <button id="saveEvenEmpty" type="button">OK</button>
+                    <button id="cancelStudentBtn" type="button">Cancel</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <span class="close"><img src="icons/delete.png" alt="Close"></span>
+            <h1 id="studentToDelete">Delete student </h1>
+            <br>
+            <div class="modal-buttons">
+                <button id="deleteConfirmBtn">Delete</button>
+                <button id="cancelDeleteBtn" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

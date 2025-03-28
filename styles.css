@@ -1,0 +1,611 @@
+/* загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* хедер */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1D1F2D;
+    color: white;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.178);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.header-icons {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.header-icons > * {
+    margin-right: 15px; /* Додаємо відступи між елементами */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.hidden-menu-button img {
+    height: 26px;
+    width: 26px;
+}
+
+[class*="close"] img{
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+}
+
+/* контейнер для навігації та контенту */
+.main {
+    display: flex;
+    flex: 1;
+}
+
+/* бічне меню */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar ul {
+    width: 100%;
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    padding: 10px 30px 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e4e4e4;
+}
+
+b {
+    color: #4a8dff;
+}
+
+.add-button {
+    display: flex;
+    height: 30px;
+    margin-left: auto;
+    background-color: #2a60d4;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #19429c;
+}
+
+.button-text, .button-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 15px;
+    color: #ffffff;
+    height: 100%;
+}
+
+.button-icon {
+    background-color: #2656BE;
+}
+
+.button-icon img {
+    height: 13px;
+    width: 13px;
+}
+
+.sidebarForPhones {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    z-index: 999;
+    background-color: #1D1F2D;
+    box-shadow: -10px 1px 10px hsla(0, 0%, 0%, 0.23);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.sidebarForPhones ul {
+    width: 100%;
+    list-style: none;
+}
+
+.sidebarForPhones ul li {
+    width: 100%;
+}
+
+.sidebarForPhones ul li:has(b) {
+    background-color: hsla(0, 0%, 0%, 0.23);
+}
+
+.sidebarForPhones ul li:has(img) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 22px;
+}
+
+.sidebarForPhones ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 10px 20px 10px;
+}
+
+.sidebarForPhones span {
+    padding: 10px 15px 10px;
+}
+
+.sidebarForPhones ul img {
+    height: 19px;
+    width: 19px;
+}
+
+.hidden-menu-button {
+    display: none;
+}
+
+@media(max-width: 900px) {
+    .header-icons .bell-icon, .user-profile{
+        display: none;
+    }
+    .sidebar {
+        display: none;
+    }
+    .hidden-menu-button {
+        display: block;
+        margin-right: 2px;
+    }
+}
+
+@media(max-width: 650px) {
+    th {
+        display: none;
+    }
+
+    th:first-child {
+        display: block;
+    }
+
+    td:first-child {
+        text-align: center;
+    }
+    
+    .option-buttons {
+        text-align: left;
+    }
+
+    td:not(:first-child) {
+        display: grid;
+        grid-template-columns: 18ch auto;
+        padding: 0.5rem 1rem;
+        text-align: left;
+    }
+
+    td:not(:first-child)::before {
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-align: left;
+    }
+
+    .modal .modal-content {
+        width: 80%;
+        padding: 35px;
+        font-size: 18px;
+    }
+
+    .input{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebarForPhones {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .button-text {
+        display: none;
+    }
+
+    .button-icon {
+        background-color: #2a60d4;
+    }
+
+    .modal .modal-content {
+        margin: 0% 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-buttons {
+        display: block;
+        flex-direction: column;
+    }
+
+    .modal-buttons button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .modal-buttons #saveEvenEmpty, #cancelStudentBtn {
+        border: 1px solid #2a60d4;
+    }
+
+    #saveStudent {
+        background-color: #2a60d4;
+        color: white;
+        
+    }
+
+    td:not(:first-child) {
+        grid-template-columns: 12ch auto;
+    }
+
+    .sidebarForPhones ul img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .sidebarForPhones {
+        padding: 20px 10px;
+    }
+
+    .sidebarForPhones ul li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.wrapper {
+    width: min(1200px, 100% - 2rem);
+    margin: 30px;
+}
+
+.bell-icon {
+    position: relative; 
+    display: inline-block;
+}
+
+.bell-icon img {
+    height: 25px;
+    width: 25px;
+}
+
+.bell-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px; 
+    right: 0px; 
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.bell-icon.show-notification::after {
+    display: none;
+}
+
+.bell-icon.animate {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(35deg); }
+    20% { transform: rotate(-30deg); }
+    30% { transform: rotate(25deg); }
+    40% { transform: rotate(-20deg); }
+    50% { transform: rotate(15deg); }
+    60% { transform: rotate(-10deg); }
+    70% { transform: rotate(5deg); }
+    80% { transform: rotate(0); }
+}
+
+.dropdownRecentMessages {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 210px;
+    width: 200px;
+    background: white;
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.23);
+    padding: 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdownUserProfile {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    width: 100px;
+    background: white;
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.23);
+    padding: 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+.user-profile:hover > .dropdownUserProfile {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdownUserProfile li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdownUserProfile li:last-child {
+    border-bottom: none;
+}
+
+.dropdownUserProfile a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdownRecentMessages li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdownRecentMessages li:last-child {
+    border-bottom: none;
+}
+
+.dropdownRecentMessages a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+ a .bell-icon:hover > .dropdownRecentMessages {
+    display: block;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    border: 0.5px solid hsla(0, 0%, 0%, 0.178);
+}
+
+th, td {
+    border: 0.5px solid hsla(0, 0%, 0%, 0.178);
+    padding: 0.5rem;
+    text-align:center;
+}
+
+td:first-child {
+    background-color: hsla(0, 0%, 0%, 0.178);
+}
+
+th {
+    background-color: hsla(0, 0%, 0%, 0.178);
+}
+
+tr:nth-of-type(2n) {
+    background-color: hsla(0, 0%, 0%, 0.027);
+}
+
+.option-buttons{
+    display: inline;
+    cursor: pointer;
+}
+
+.edit {
+    background-image: url(icons/pen.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #bfbfbf;
+    margin-right: 5px;
+    height: 35px;
+    width: 35px;
+}
+
+.edit:hover {
+    background-image: url(icons/penWhite.png);
+    background-color: #008134;
+}
+
+.delete {
+    background-image: url(icons/delete.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #bfbfbf;
+    height: 35px;
+    width: 35px;
+}
+
+.delete:hover {
+    background-image: url(icons/deleteWhite.png);
+    background-color: #a93b19;
+}
+
+/* модальнe вікно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.37);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 500px;
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.modal-content input, 
+.modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    display: flex;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+}
+
+#cancelStudentBtn {
+    margin-left: auto;
+}
+
+.deleteSelectedBtn {
+    height: 27px;
+    margin-left: auto;
+    background-color: #DC5445;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.deleteSelectedBtn:hover {
+    background-color: #bc3c2e;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#cancelBtn {
+    width: 100%;
+}
+
+.dropdownMessage img {
+    width: 35px;
+    height: 35px;
+}
+
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 14px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 0.5px solid #bfbfbf;
+  margin-top: 20px;
+}
+
+.pagination a.active {
+  background-color: #2a60d4;
+  color: white;
+  border: 1px solid #2a60d4;
+}
+
+.pagination a:hover:not(.active) {background-color: #e4e4e4;}
+
+.studentName.invalid {
+    border: 1px solid red;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}

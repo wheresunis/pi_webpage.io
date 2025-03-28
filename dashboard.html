@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <header>
+        <a class="logo" href="students.html">CMS</a>
+        <div class="header-icons">
+            <span class="bell-icon" id="notificationBtn"><img src="icons/bell.png" alt="bell icon"></span>
+            <ul class="dropdownRecentMessages" id="notificationDropdown">
+                <li>
+                    <a class="dropdownMessage" href="#">
+                        <div class="user-profile">
+                            <span class="avatar"><img src="icons/personAvatar.png" alt="Avatar1"></span>
+                            <span class="name">John Doe</span>
+                        </div>
+                        <span class="message">Message1</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdownMessage" href="#">
+                        <div class="user-profile">
+                            <span class="avatar"><img src="icons/personAvatar.png" alt="Avatar2"></span>
+                            <span class="name">Jane Smith</span>
+                        </div>
+                        <span class="message">Message2</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdownMessage" href="#">
+                        <div class="user-profile">
+                            <span class="avatar"><img src="icons/personAvatar.png" alt="Avatar3"></span>
+                            <span class="name">Alex Johnson</span>
+                        </div>
+                        <span class="message">Message3</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="dropdownUserProfile" id="dropdownUserProfile">
+                <li>
+                    <a href="#">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Log out
+                    </a>
+                </li>
+            </ul>
+
+            <div class="user-profile" id="user-profile">
+                <span class="avatar"><img src="icons/avatar.png" alt="avatar icon"></span>
+                <span class="user-name">Maria Sokolovska</span>
+            </div>
+            <span class="hidden-menu-button"><img src="icons/menu.png" alt="menu icon"></span>
+        </div>
+    </header>
+    <div class="main">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#"><b>Dashboard</b></a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <link rel="manifest" href="./manifest.json"/>
+            </ul>
+        </nav>
+          
+        <section class="wrapper">
+            <h1>Dashboard</h1>
+        </section>
+
+        <nav class="sidebarForPhones">
+            <span class="closeSidebarBtn"><img src="icons/deleteWhite.png" alt="close icon"></span>
+            <ul>
+                <li><a href="#"><b>Dashboard</b></a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li>
+                    <a href="messages.html">Messages</a>
+                    <img src="icons/email.png" alt="inbox icon">
+                </li>
+                <li>
+                    <a href="#">Profile</a>
+                    <img src="icons/profile.png" alt="profile icon">
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
