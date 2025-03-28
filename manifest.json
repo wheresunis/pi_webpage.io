@@ -2,8 +2,8 @@
     "name": "CMS App",
     "short_name": "CMS App",
     "description": "Це прогресивний веб-додаток (PWA) для швидкого та зручного доступу до контенту.",
-    "id": "./",
-    "start_url": "./students.html",
+    "id": "/",
+    "start_url": "/students.html",
     "display": "standalone",
     "orientation": "portrait-primary",
     
