@@ -295,6 +295,22 @@ function saveChanges() {
 
     editingRow = null;
     closeModal();
+
+    let tableData = [];
+    document.querySelectorAll("table tr").forEach((row, index) => {
+        if (index === 0) return;
+        let cells = row.querySelectorAll("td");
+        let rowData = {
+            group: cells[1].innerText,
+            name: cells[2].innerText,
+            gender: cells[3].innerText,
+            birthday: cells[4].innerText,
+            status: cells[5].innerText
+        };
+        tableData.push(rowData);
+    });
+
+    console.log(JSON.stringify(tableData, null, 2));
 }
 
 document.querySelectorAll(".close").forEach(closeBtn => {
