@@ -1,7 +1,5 @@
 /* jshint esversion: 11 */
 
-
-
 const pageTitle = document.querySelector("title");
 
 const notificationButton = document.getElementById("notificationBtn");
@@ -108,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return isNameValid;
         }
 
-        // Обробник відправки форми
+        //обробник відправки форми
         form.addEventListener('submit', function (event) {
             event.preventDefault();
             if (validateForm()) {
@@ -117,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     addStudent();
                 }
-                form.reset(); // очищаємо поля після додавання
+                form.reset(); 
             }
         });
 
@@ -389,5 +387,3 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
-
-    
