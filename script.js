@@ -97,6 +97,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function validateForm() {
+            if(nameInput.value == "")
+            {
+                let errorSpan = document.querySelector(".error-message");
+                errorSpan.textContent = "*Name can not be blank.";
+                errorSpan.style.display = "inline";
+                return false;
+            }
             let isNameValid = validateInput(nameInput, /^([A-ZА-ЯІЇЄҐ][a-zа-яієїґ]+\s?)*$/, "*Name can not contain digits. Name should start with an uppercase letter.");
             return isNameValid;
         }
