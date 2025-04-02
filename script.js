@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorSpan.style.display = "inline";
                 return false;
             }
-            let isNameValid = validateInput(nameInput, /^(([A-ZА-ЯІЇЄҐ][a-zа-яієїґ]+)\s?)*$/, "*Name can not contain digits. Name should start with an uppercase letter.");
+            let isNameValid = validateInput(nameInput, /^(([A-ZА-ЯІЇЄҐ][a-zа-яієїґ-]+)\s?)*$/, "*Name can not contain digits. Name should start with an uppercase letter.");
             return isNameValid;
         }
 
